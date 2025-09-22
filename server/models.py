@@ -1,6 +1,4 @@
-# server/models.py
-
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy 
 from sqlalchemy import MetaData
 from sqlalchemy_serializer import SerializerMixin
 
@@ -58,4 +56,4 @@ class Animal(db.Model, SerializerMixin):
     zookeeper = db.relationship('Zookeeper', back_populates='animals')
 
     def __repr__(self):
-        return f'<Animal {self.name}, a {self.species}>'
+        return f'<Animal {self.name}, a {self.species}>' 
